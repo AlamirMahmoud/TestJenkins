@@ -44,8 +44,7 @@ pipeline {
                 sh '''
                 python3 scripts/deploy.py \
                 --archive-path $OUTPUT_DIR/YourApp.xcarchive \
-                --output-dir $OUTPUT_DIR \
-                --export-options-plist path/to/ExportOptions.plist
+                --output-dir $OUTPUT_DIR
                 '''
                 echo 'Deploy stage completed successfully!'
             }
