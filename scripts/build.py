@@ -6,15 +6,15 @@ def build(development_id, code_sign_pass, project_path, scheme, output_dir):
     # Unlock the keychain
     # subprocess.run(['security', 'unlock-keychain', '-p', code_sign_pass], check=True)
     
-    # # Clean and build the project
-    # subprocess.run(['xcodebuild', 'clean', '-project', project_path, '-scheme', scheme, '-configuration', 'Release'], check=True)
-    # subprocess.run([
-    #     'xcodebuild', 'archive',
-    #     '-project', project_path,
-    #     '-scheme', scheme,
-    #     '-archivePath', f'{output_dir}/YourApp.xcarchive',
-    #     f'DEVELOPMENT_TEAM={development_id}'
-    # ], check=True)
+    # Clean and build the project
+    subprocess.run(['xcodebuild', 'clean', '-project', project_path, '-scheme', scheme, '-configuration', 'Release'], check=True)
+    subprocess.run([
+        'xcodebuild', 'archive',
+        '-project', project_path,
+        '-scheme', scheme,
+        '-archivePath', f'{output_dir}/YourApp.xcarchive',
+        f'DEVELOPMENT_TEAM={development_id}'
+    ], check=True)
     print("Build completed successfully.")
     print(development_id, code_sign_pass, project_path, scheme, output_dir)
 

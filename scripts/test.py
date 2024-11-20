@@ -3,14 +3,14 @@ import subprocess
 
 def test(development_id, project_path, scheme):
     # # Add your testing commands here
-    # print("Running tests...")
-    # # Example: Run unit tests
-    # subprocess.run([
-    #     'xcodebuild', 'test',
-    #     '-project', project_path,
-    #     '-scheme', scheme,
-    #     f'DEVELOPMENT_TEAM={development_id}'
-    # ], check=True)
+    print("Running tests...")
+    # Example: Run unit tests
+    subprocess.run([
+        'xcodebuild', 'test',
+        '-project', project_path,
+        '-scheme', scheme,
+        f'DEVELOPMENT_TEAM={development_id}'
+    ], check=True)
     print("Tests executed successfully.")
     print(development_id, project_path, scheme)
 

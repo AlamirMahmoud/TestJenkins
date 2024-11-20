@@ -3,13 +3,13 @@ import subprocess
 
 def deploy(archive_path, output_dir, export_options_plist):
     # Export the .ipa file
-    # subprocess.run([
-    #     'xcodebuild', '-exportArchive',
-    #     '-archivePath', archive_path,
-    #     '-exportOptionsPlist', export_options_plist,
-    #     '-exportPath', output_dir
-    # ], check=True)
-    # print(f"IPA exported to {output_dir}.")
+    subprocess.run([
+        'xcodebuild', '-exportArchive',
+        '-archivePath', archive_path,
+        '-exportOptionsPlist', export_options_plist,
+        '-exportPath', output_dir
+    ], check=True)
+    print(f"IPA exported to {output_dir}.")
     print("Deploy completed successfully.")
     print(archive_path, output_dir, export_options_plist)
 
