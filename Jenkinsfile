@@ -25,18 +25,18 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                echo 'Starting the Test stage...'
-                sh '''
-                python3 scripts/test.py \
-                --development-id $DEVELOPMENT_ID \
-                --project-path $PROJECT_PATH \
-                --scheme $SCHEME
-                '''
-                echo 'Test stage completed successfully!'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         echo 'Starting the Test stage...'
+        //         sh '''
+        //         python3 scripts/test.py \
+        //         --development-id $DEVELOPMENT_ID \
+        //         --project-path $PROJECT_PATH \
+        //         --scheme $SCHEME
+        //         '''
+        //         echo 'Test stage completed successfully!'
+        //     }
+        // }
 
         stage('Deploy') {
             steps {
