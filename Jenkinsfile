@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     environment {
-        DEVELOPMENT_ID = 'YOUR_DEVELOPMENT_TEAM_ID' // Replace with your development team ID
-        CODE_SIGN_PASS = 'YOUR_KEYCHAIN_PASSWORD'  // Replace with your keychain password
-        PROJECT_PATH = 'path/to/your.xcodeproj'    // Path to your Xcode project
-        SCHEME = 'YourSchemeName'                 // Replace with your scheme name
+        DEVELOPMENT_ID = 'FGSCFWBUX2' // Replace with your development team ID
+        CODE_SIGN_PASS = '431971'  // Replace with your keychain password
+        PROJECT_PATH = '/Users/admin/Documents/TestJenkins/TestJenkinsOO.xcodeproj'    // Path to your Xcode project
+        SCHEME = 'TestJenkinsOO'                 // Replace with your scheme name
         OUTPUT_DIR = 'build/ipa'                  // Directory for .ipa output
     }
 
